@@ -73,3 +73,6 @@ gem 'jquery-rails'
 
 #font-awesomeの導入
 gem 'font-awesome-sass', '~> 5.13'
+
+# kaminariの導入。たぶんユーザーの詳細だけ引き出すのに使う
+gem 'kaminari','~> 1.2.1'

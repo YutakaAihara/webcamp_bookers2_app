@@ -6,6 +6,10 @@ class UsersController < ApplicationController
 
   # userの詳細
   def show
+    @user = User.find(params[:id])
+    @book = Book.new
+    @books = Book
+
   end
 
   # user情報の更新画面
@@ -16,4 +20,9 @@ class UsersController < ApplicationController
   def update
   end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :introduction, :profile_image)
+  end
 end
