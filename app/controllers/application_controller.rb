@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   # ユーザー認証したユーザー以外は使わせない「トップとアバウトを除いて」
-  before_action :authenticate_user!,except: [:top]
+  before_action :authenticate_user!,except: [:top, :about]
   # devise利用の機能（ユーザー登録等）を行われそうになったら、その前に:configure_permitted_parametersを行ってください。
   before_action :configure_permitted_parameters, if: :devise_controller?
 
