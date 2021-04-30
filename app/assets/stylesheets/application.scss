@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+// SCSS用のbootstrapを使用するため、cssからscssに変える必要がある。
+// bootstrapを読み込む
+@import "bootstrap";
+// font-awesomeを読み込む
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
