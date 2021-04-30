@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="raw">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h1 class="edit-heading">Editing Book</h1>
+      <%= form_with model:@book, local:true do |f| %>
+        <div class="edit-contents form-group">
+          <p>Title</p>
+          <div><%= f.text_field :title, class: "edit-text form-control" %></div>
+        </div>
+        <div class="edit-contents form-group">
+          <p>Opinion</p>
+          <div><%= f.text_area :body,class: "edit-text form-control" %></div>
+        </div>
+        <div class="form-group">
+          <%= f.submit 'Update Book', class: "btn btn-success" %>
+        </div>
+      <% end %>
+      <div class="show-back">
+        <%= link_to "Show", book_path(@book) %>
+        <!--EditとBackの間の棒-->|
+        <%= link_to "Back", books_path %>
+      </div>
+    </div>
+  </div>
+</div>
