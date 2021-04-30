@@ -1,7 +1,22 @@
 <div class="container px-5 px-sm-0">
-  <div class="row">
-    <%= render 'books/leftside', book: @book, user: @user %>
-    
-    <%= render 'books/main', books: @books, user: @user %>
-  </div>
+  <% if controller.action_name == "index" %>
+    <div class="row">
+      <%= render 'books/sidebar', book: @book, user: @user %>
+
+      <%= render 'books/main', books: @books, user: @user %>
+    </div>
+
+  <% elsif controller.action_name == "create" %>
+    <% if @create_book.errors.any? %>
+      <%= @create_book.errors.count %>errors prohibited this obj from being saved:
+      <% @create_book.errors.full_messages.each do |message| %>
+        <%= message %>
+      <% end %>
+    <% end %>
+    <div class="row">
+      <%= render 'books/sidebar', book: @book, user: @user %>
+
+      <%= render 'books/main', books: @books, user: @user %>
+    </div>
+  <% end %>
 </div>
