@@ -2,22 +2,28 @@ class UsersController < ApplicationController
 
   # user一覧画面
   def index
+    @user = current_user
+    @users = User.all
+    @book = Book.new
   end
 
   # userの詳細
   def show
-    @user = User.find(params[:id])
     @book = Book.new
-    @books = Book
-
+    @user = User.find(params[:id])
+    @books = @user.books.all
   end
 
   # user情報の更新画面
   def edit
+    @user = User.find(params[:id])
   end
 
   # userの情報をデータベースに更新
   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to user_path(@user.id)
   end
 
   private
