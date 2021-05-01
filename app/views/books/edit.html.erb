@@ -8,19 +8,19 @@
         <% end %>
       <% end %>
       <h1 class="edit-heading">Editing Book</h1>
-      <%= form_with model:@book, local:true do |f| %>
-        <div class="edit-contents form-group">
-          <p>Title</p>
-          <div><%= f.text_field :title, class: "edit-text form-control" %></div>
-        </div>
-        <div class="edit-contents form-group">
-          <p>Opinion</p>
-          <div><%= f.text_area :body,class: "edit-text form-control" %></div>
-        </div>
-        <div class="form-group">
-          <%= f.submit 'Update Book', class: "btn btn-success" %>
-        </div>
-      <% end %>
+        <%= form_with model:@book, local:true do |f| %>
+          <div class="form-group">
+            <%= f.label :title, 'Title', class: "book_title" %>
+            <%= f.text_field :title, class: "form-control book_title" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :body, 'Opinion', class: "book_opinion" %>
+       　    <%= f.text_area :body,class: "form-control book_opinion" %>
+          </div>
+          <div class="form-group">
+            <%= f.submit 'Create Book', class: "btn btn-success" %>
+          </div>
+        <% end %>
       <div class="show-back">
         <%= link_to "Show", book_path(@book) %>
         <!--EditとBackの間の棒-->|
