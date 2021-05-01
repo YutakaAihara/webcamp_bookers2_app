@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
 
-  # newはそれ自体のファイルは必要ないので作らない。
+  # newはviewファイル必要ないので作らない。
   # 本の一覧
   def index
-    @books = Book.all
+    @books = Book.page(params[:page]).reverse_order
     @book = Book.new
     @user = current_user
   end
@@ -29,7 +29,6 @@ class BooksController < ApplicationController
     @book = Book.new
     @show_book = Book.find(params[:id])
     @user = @show_book.user
-
   end
 
   #本の更新画面
