@@ -1,1 +1,2 @@
 DMMWEBCAMP　課題３
+RubyonRailsの演習課題として作成しました。
