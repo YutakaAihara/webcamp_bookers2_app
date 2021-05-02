@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     # devise_parameter_sanitizer => deviseのUserモデルに関わる「ログイン」「新規登録」などのリクエストからパラメーターを取得できるようになるメソッド.
     # 新しく追加したカラムをdeviseに定義されているstrong parameterに含めたいときにpermitを使う。
-    # 今回はユーザー登録時にnameカラムも受け取りたい。（初期設定はメールアドレスとパスワード
+    # 今回はユーザー登録時にnameカラムも受け取りたい。（初期設定はメールアドレスとパスワードらしいけど、なぜかemailも書かないと受け取ってくれない
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email])
     # ログインの時にもnameカラムを受け取りたい。
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
