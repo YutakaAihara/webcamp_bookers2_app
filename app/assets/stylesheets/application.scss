@@ -26,6 +26,7 @@
   box-sizing: border-box;
 }
 
+
 .fa, .fas {
     font-family: 'Font Awesome 5 Free';
     font-weight: 600;
@@ -36,10 +37,11 @@
   margin-bottom: 10px;
 }
 
-input {
+.sign {
   padding: 1px 2px;
 }
 
 #notice {
   color: green;
 }
+
