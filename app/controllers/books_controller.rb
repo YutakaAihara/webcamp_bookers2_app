@@ -29,6 +29,7 @@ class BooksController < ApplicationController
     @book = Book.new
     @show_book = Book.find(params[:id])
     @user = @show_book.user
+    @book_comment = BookComment.new
   end
 
   #本の更新画面

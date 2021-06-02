@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   end
 
   # いらないルーティングは実行しないようにする。(今回new等はいらない)
-  resources :books, only: [:index, :create, :show, :edit, :update, :destroy]
+  resources :books, only: [:index, :create, :show, :edit, :update, :destroy] do
+    resource :favorites, only: [:create, :destroy]
+    resources :book_comments, only: [:create, :destroy]
+
+  end
   resources :users, only: [:index, :show, :edit, :update]
 end
