@@ -55,8 +55,9 @@
             <% end %>
             <%= book_comment.comment %>
             <% if book_comment.user == current_user %>
-              <%= link_to "Destroy", book_book_comment_path(book_comment.book_id, book_comment.id), class:"btn btn-danger btn-sm", method: :delete, data: {confirm: "本当に消しますか？"} %><br>
+              <%= link_to "Destroy", book_book_comment_path(book_comment.book_id, book_comment.id), class:"btn btn-danger btn-sm", method: :delete, data: {confirm: "本当に消しますか？"} %>
             <% end %>
+            <br>
             <%= link_to user_path(book_comment.user.id) do %>
                 <%= book_comment.user.name %>
             <% end %>
