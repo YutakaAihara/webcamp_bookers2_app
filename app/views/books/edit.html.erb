@@ -1,13 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-      <% if @book.errors.any? %>
-        <%= @book.errors.count %>errors prohibited this obj from being saved:
-        <% @book.errors.full_messages.each do |message| %>
-          <%= message %>
-        <% end %>
-      <% end %>
       <h1 class="edit-heading">Editing Book</h1>
+        <%= render "layouts/errors", object: @book %>
         <%= form_with model:@book, local:true do |f| %>
           <div class="form-group">
             <%= f.label :title, 'Title', class: "book_title" %>
@@ -23,7 +18,7 @@
         <% end %>
       <div class="show-back">
         <%= link_to "Show", book_path(@book) %>
-        <!--EditとBackの間の棒-->|
+          |
         <%= link_to "Back", books_path %>
       </div>
     </div>
