@@ -25201,3 +25201,13 @@ Processing by HomesController#top as HTML
 Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 113.52.28.249 at 2021-06-03 11:30:25 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
