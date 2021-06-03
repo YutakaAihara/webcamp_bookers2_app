@@ -25103,3 +25103,101 @@ Processing by HomesController#top as HTML
 Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 113.52.28.249 at 2021-06-03 11:27:13 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/bookers2/app/views/layouts/application.html.erb:15: syntax error, unexpected '<', expecting ')'
+    <main>
+    ^
+/home/ec2-user/environment/bookers2/app/views/layouts/application.html.erb:16: syntax error, unexpected '<'
+  		<p id="notice"><%= flash[:notice] );@output_b...
+  		               ^
+/home/ec2-user/environment/bookers2/app/views/layouts/application.html.erb:34: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/bookers2/app/views/layouts/application.html.erb:36: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/layouts/application.html.erb:15: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:34: syntax error, unexpected ensure, expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected end, expecting ')'
+Started GET "/" for 113.52.28.249 at 2021-06-03 11:27:30 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial homes/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/bookers2/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/kaminari-core-1.2.1/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.7.3/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13: 		<%= render "header" %>
+    14: 
+    15:     <main>
+    16:   		<p id="notice"><%= flash[:notice] %></p>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__3590289712508661850_70026589750360'
+Started GET "/" for 113.52.28.249 at 2021-06-03 11:27:44 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial layout/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/bookers2/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/kaminari-core-1.2.1/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.7.3/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13: 		<%= render "layout/header" %>
+    14: 
+    15:     <main>
+    16:   		<p id="notice"><%= flash[:notice] %></p>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__3590289712508661850_70026510001100'
+Started GET "/" for 113.52.28.249 at 2021-06-03 11:27:50 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 95ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 113.52.28.249 at 2021-06-03 11:28:13 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 113.52.28.249 at 2021-06-03 11:28:44 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+

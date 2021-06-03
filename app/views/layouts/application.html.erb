@@ -10,52 +10,7 @@
   </head>
 
   <body>
-    <header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				<div class="container">
-					<!-- span要素が必要…？ -->
-					<%= link_to  root_path, class: 'navbar-brand' do %>
-						<span>Bookers</span>
-					<% end%>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expand="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav ml-auto">
-							<% if user_signed_in? %>
-							<!--ログイン状態であれば-->
-							<li>
-								<%= link_to user_path(current_user.id), class: 'fas fa-home nav-link text-light' do %> Home<% end %>
-							</li>
-							<li>
-								<%= link_to users_path, class: 'fas fa-users nav-link text-light' do %> Users<% end %>
-							</li>
-							<li>
-								<%= link_to books_path, class: 'fas fa-book-open nav-link text-light' do %> Books<% end %>
-							</li>
-							<li>
-								<%= link_to destroy_user_session_path, class: 'fas fa-sign-out-alt nav-link text-light', method: :delete do %> logout<% end %>
-							</li>
-							<% else %>
-							<!-- ログイン状態でなければ -->
-							<li>
-								<%= link_to root_path, class: 'nav-link text-light fas fa-home' do %> Home<% end %>
-							</li>
-							<li>
-								<%= link_to about_path, class: 'nav-link text-light fas fa-link' do %> About<% end %>
-							</li>
-							<li>
-								<%= link_to new_user_registration_path, class: 'nav-link text-light fas fa-user-plus' do %> sign up<% end %>
-							</li>
-							<li>
-								<%= link_to new_user_session_path, class: 'nav-link text-light fas fa-sign-in-alt' do %> login<% end %>
-							</li>
-							<% end %>
-						</ul>
-					</div>
-				</div>
-			</nav>
-	  </header>
+		<%= render "layouts/header" %>
 
     <main>
   		<p id="notice"><%= flash[:notice] %></p>
