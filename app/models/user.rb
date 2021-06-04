@@ -34,4 +34,16 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
+  
+  def self.search(search_type, keyword)
+    if search_type == "完全一致"
+      @objects = User.where(name: @keyword)
+    elsif search_type == "前方一致"
+      @objects = User.where("name LIKE ?", "%#{@keyword}" )
+    elsif search_type == "後方一致"
+      @objects = User.where("name LIKE ?", "#{@keyword}%" )
+    elsif search_type == "部分一致"
+      @objects = User.where("name LIKE ?", "%#{@keyword}%" )
+    end
+  end
 end
