@@ -30333,3 +30333,1631 @@ Processing by SearchController#search as HTML
 Completed 200 OK in 159ms (Views: 132.0ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=%E6%A4%9C%E7%B4%A2" for 113.52.28.249 at 2021-06-04 02:33:28 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>"検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 96ms (Views: 91.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=%E6%A4%9C%E7%B4%A2" for 113.52.28.249 at 2021-06-04 02:33:44 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>"検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 97ms (Views: 93.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 113.52.28.249 at 2021-06-04 02:49:07 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (11.8ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/_user_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_list.html.erb:18
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_list.html.erb:19
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  ↳ app/views/users/_user_list.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 2]]
+  ↳ app/views/users/_user_list.html.erb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mRelationship Load (1.7ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user_list.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  ↳ app/views/users/_user_list.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  ↳ app/views/users/_user_list.html.erb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_user_list.html.erb:25
+  Rendered users/_user_list.html.erb (39.5ms)
+  Rendered users/index.html.erb within layouts/application (61.0ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 207ms (Views: 169.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:49:29 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/bookers2/app/views/search/search.html.erb:9: syntax error, unexpected ensure, expecting end
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/bookers2/app/views/search/search.html.erb:11: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/search/search.html.erb:9: syntax error, unexpected ensure, expecting end
+app/views/search/search.html.erb:11: syntax error, unexpected end-of-input, expecting end
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:49:59 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/bookers2/app/views/search/search.html.erb:9: syntax error, unexpected ensure, expecting end
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/bookers2/app/views/search/search.html.erb:11: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/search/search.html.erb:9: syntax error, unexpected ensure, expecting end
+app/views/search/search.html.erb:11: syntax error, unexpected end-of-input, expecting end
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:50:05 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial books/_book_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/bookers2/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/kaminari-core-1.2.1/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.7.3/app/views"
+):
+    3:   <%= render "users/user_list", users: @users %>
+    4: <% elsif @table = "book_table" %>
+    5:   <h2>Books search for "#{@keyword}"</h2>
+    6:   <%= render "books/book_list", books: @books %>
+    7: <% end %>
+  
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259161212500'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:50:47 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.9ms)
+  Rendered search/search.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259256942640'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259256907720'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:51:25 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.8ms)
+  Rendered search/search.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259256647240'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259256596580'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:51:38 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (4.7ms)
+  Rendered search/search.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259256525440'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259256405140'
+Started GET "/" for 113.52.28.249 at 2021-06-04 02:52:29 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  Rendered layouts/_header.html.erb (5.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 168ms (Views: 166.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 113.52.28.249 at 2021-06-04 02:52:34 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (28.3ms)
+  Rendered books/_form.html.erb (1.7ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."user_id" = ? ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  Rendered books/_book_lists.html.erb (5.2ms)
+  Rendered users/show.html.erb within layouts/application (41.1ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 157ms (Views: 133.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books" for 113.52.28.249 at 2021-06-04 02:52:37 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (1.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (8.7ms)
+  Rendered books/_form.html.erb (1.5ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (51.8ms)
+  Rendered books/index.html.erb within layouts/application (68.8ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 186ms (Views: 178.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/books" for 113.52.28.249 at 2021-06-04 02:52:44 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (9.2ms)
+  Rendered books/_form.html.erb (2.3ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (40.8ms)
+  Rendered books/index.html.erb within layouts/application (58.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 156ms (Views: 149.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/books" for 113.52.28.249 at 2021-06-04 02:53:09 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (9.5ms)
+  Rendered books/_form.html.erb (1.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:14
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:31
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:14
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:31
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:14
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:31
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:14
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:31
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:36
+  Rendered books/_book_lists.html.erb (38.1ms)
+  Rendered books/index.html.erb within layouts/application (55.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 184ms (Views: 178.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/books" for 113.52.28.249 at 2021-06-04 02:53:34 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (9.2ms)
+  Rendered books/_form.html.erb (1.9ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:14
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:31
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:14
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:31
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:14
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:31
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:14
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:31
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:36
+  Rendered books/_book_lists.html.erb (38.2ms)
+  Rendered books/index.html.erb within layouts/application (54.9ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 170ms (Views: 164.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/books" for 113.52.28.249 at 2021-06-04 02:54:21 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (8.9ms)
+  Rendered books/_form.html.erb (1.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (37.6ms)
+  Rendered books/index.html.erb within layouts/application (55.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 171ms (Views: 164.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/books" for 113.52.28.249 at 2021-06-04 02:54:42 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (10.2ms)
+  Rendered books/_form.html.erb (2.3ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (39.1ms)
+  Rendered books/index.html.erb within layouts/application (57.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 158ms (Views: 151.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/books" for 113.52.28.249 at 2021-06-04 02:54:53 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (1.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (9.3ms)
+  Rendered books/_form.html.erb (1.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (55.6ms)
+  Rendered books/index.html.erb within layouts/application (73.7ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 183ms (Views: 177.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/books" for 113.52.28.249 at 2021-06-04 02:54:56 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (8.6ms)
+  Rendered books/_form.html.erb (1.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (38.3ms)
+  Rendered books/index.html.erb within layouts/application (53.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 171ms (Views: 164.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:55:03 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (2.1ms)
+  Rendered search/search.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259163988380'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259163880260'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:55:26 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.9ms)
+  Rendered search/search.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259256903780'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259256757760'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:55:39 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.8ms)
+  Rendered search/search.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259176627960'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259176586860'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:56:11 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.9ms)
+  Rendered search/search.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259158384300'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259157894220'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:57:28 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (2.1ms)
+  Rendered search/search.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259257608740'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259257565900'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:58:33 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.8ms)
+  Rendered search/search.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259191770160'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259191722440'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 02:58:41 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (2.0ms)
+  Rendered search/search.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259174931060'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259174882180'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:00:06 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.9ms)
+  Rendered search/search.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259163546560'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259163384940'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:01:40 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (4.9ms)
+  Rendered search/search.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_51464740'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_47979320'
+Started GET "/users" for 113.52.28.249 at 2021-06-04 03:01:52 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (12.1ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 2]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user_lists.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_user_lists.html.erb:25
+  Rendered users/_user_lists.html.erb (39.0ms)
+  Rendered users/index.html.erb within layouts/application (60.1ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 194ms (Views: 179.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E8%8A%B1&table=user_table&search_type=forword&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:02:03 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"花", "table"=>"user_table", "search_type"=>"forword", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (3.3ms)
+  Rendered search/search.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259159568340'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259159416860'
+Started GET "/search?utf8=%E2%9C%93&keyword=%E8%8A%B1&table=user_table&search_type=forword&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:03:22 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"花", "table"=>"user_table", "search_type"=>"forword", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (2.0ms)
+  Rendered search/search.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259158377020'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259157754920'
+Started GET "/search?utf8=%E2%9C%93&keyword=%E8%8A%B1&table=user_table&search_type=forword&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:03:55 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"花", "table"=>"user_table", "search_type"=>"forword", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.9ms)
+  Rendered search/search.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb___2838386607768275332_70259256289460'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb__497091891130602320_70259256229000'
+Started GET "/search?utf8=%E2%9C%93&keyword=%E8%8A%B1&table=user_table&search_type=forword&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:04:14 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"花", "table"=>"user_table", "search_type"=>"forword", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered users/_user_lists.html.erb (1.9ms)
+  Rendered search/search.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7:     </tr>
+     8:   </thead>
+     9:   <tbody>
+    10:     <% users.each do |user| %>
+    11:     <tr>
+    12:       <td>
+    13:         <%= link_to user_path(user) do %>
+  
+app/views/users/_user_lists.html.erb:10:in `_app_views_users__user_lists_html_erb___1593549911108419349_70259191918360'
+app/views/search/search.html.erb:3:in `_app_views_search_search_html_erb__497091891130602320_70259191868820'
+Started GET "/search?utf8=%E2%9C%93&keyword=%E8%8A%B1&table=user_table&search_type=forword&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:07:43 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"花", "table"=>"user_table", "search_type"=>"forword", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered users/_user_lists.html.erb (1.7ms)
+  Rendered search/search.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7:     </tr>
+     8:   </thead>
+     9:   <tbody>
+    10:     <% users.each do |user| %>
+    11:     <tr>
+    12:       <td>
+    13:         <%= link_to user_path(user) do %>
+  
+app/views/users/_user_lists.html.erb:10:in `_app_views_users__user_lists_html_erb___1593549911108419349_70259191867980'
+app/views/search/search.html.erb:3:in `_app_views_search_search_html_erb__497091891130602320_70259191800000'
+Started GET "/" for 113.52.28.249 at 2021-06-04 03:16:32 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (7.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 884ms (Views: 874.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 113.52.28.249 at 2021-06-04 03:16:33 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  Rendered layouts/_header.html.erb (64.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 162ms (Views: 160.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 113.52.28.249 at 2021-06-04 03:16:37 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://8451a9ec04ef415389957a6feb7940fc.vfs.cloud9.us-east-1.amazonaws.com/users/1
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 113.52.28.249 at 2021-06-04 03:16:37 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (32.3ms)
+  Rendered books/_form.html.erb (3.8ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."user_id" = ? ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  Rendered books/_book_lists.html.erb (6.9ms)
+  Rendered users/show.html.erb within layouts/application (48.5ms)
+  Rendered layouts/_header.html.erb (19.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 211ms (Views: 180.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E3%82%A2%E3%83%B4%E3%83%89%E3%82%A5%E3%83%AB&table=user_table&search_type=forward&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:17:01 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"アヴドゥル", "table"=>"user_table", "search_type"=>"forward", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%アヴドゥル')[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 2]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user_lists.html.erb:25
+  Rendered users/_user_lists.html.erb (42.6ms)
+  Rendered search/search.html.erb within layouts/application (46.0ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 183ms (Views: 171.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E3%82%A2%E3%83%B4%E3%83%89%E3%82%A5%E3%83%AB&table=user_table&search_type=forward&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:19:06 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"アヴドゥル", "table"=>"user_table", "search_type"=>"forward", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%アヴドゥル')[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 2]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user_lists.html.erb:25
+  Rendered users/_user_lists.html.erb (32.4ms)
+  Rendered search/search.html.erb within layouts/application (34.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 174ms (Views: 153.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:19:14 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (3.4ms)
+  Rendered search/search.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb__1482336654743932150_70255942803960'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb___4582733965997458861_70255942709460'
+Started GET "/" for 113.52.28.249 at 2021-06-04 03:19:31 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 87ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:20:38 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  Rendered books/_book_lists.html.erb (1.8ms)
+  Rendered search/search.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+    12:   <% books.each do |book| %>
+    13:     <tr>
+    14:       <td>
+    15:         <%= link_to user_path(book.user.id)do %>
+  
+app/views/books/_book_lists.html.erb:12:in `_app_views_books__book_lists_html_erb__1482336654743932150_70255938077640'
+app/views/search/search.html.erb:6:in `_app_views_search_search_html_erb___4582733965997458861_70255940501140'
+Started GET "/search?utf8=%E2%9C%93&keyword=a&table=book_table&search_type=partial&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:21:08 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"a", "table"=>"book_table", "search_type"=>"partial", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE (title LIKE '%a%')[0m
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (45.3ms)
+  Rendered search/search.html.erb within layouts/application (46.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 198ms (Views: 172.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=aaa&table=user_table&search_type=perfect&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:21:20 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"aaa", "table"=>"user_table", "search_type"=>"perfect", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (aaa)[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  Rendered users/_user_lists.html.erb (4.2ms)
+  Rendered search/search.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: aaa: SELECT "users".* FROM "users" WHERE (aaa)):
+     7:     </tr>
+     8:   </thead>
+     9:   <tbody>
+    10:     <% users.each do |user| %>
+    11:     <tr>
+    12:       <td>
+    13:         <%= link_to user_path(user) do %>
+  
+app/views/users/_user_lists.html.erb:10:in `_app_views_users__user_lists_html_erb___3274520049518988538_70255940257220'
+app/views/search/search.html.erb:3:in `_app_views_search_search_html_erb___4582733965997458861_70255940155880'
+Started GET "/" for 113.52.28.249 at 2021-06-04 03:21:45 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  Rendered layouts/_header.html.erb (16.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 122ms (Views: 119.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E8%8A%B1%E4%BA%AC%E9%99%A2%E5%85%B8%E6%98%8E&table=user_table&search_type=perfect&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:21:58 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"花京院典明", "table"=>"user_table", "search_type"=>"perfect", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (花京院典明)[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  Rendered users/_user_lists.html.erb (5.1ms)
+  Rendered search/search.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: 花京院典明: SELECT "users".* FROM "users" WHERE (花京院典明)):
+     7:     </tr>
+     8:   </thead>
+     9:   <tbody>
+    10:     <% users.each do |user| %>
+    11:     <tr>
+    12:       <td>
+    13:         <%= link_to user_path(user) do %>
+  
+app/views/users/_user_lists.html.erb:10:in `_app_views_users__user_lists_html_erb___3274520049518988538_70255953514380'
+app/views/search/search.html.erb:3:in `_app_views_search_search_html_erb___4582733965997458861_70255953478140'
+Started GET "/search?utf8=%E2%9C%93&keyword=%E8%8A%B1%E4%BA%AC%E9%99%A2&table=user_table&search_type=forward&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:22:08 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"花京院", "table"=>"user_table", "search_type"=>"forward", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%花京院')[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  Rendered users/_user_lists.html.erb (1.5ms)
+  Rendered search/search.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 107ms (Views: 102.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E8%8A%B1%E4%BA%AC%E9%99%A2&table=user_table&search_type=forward&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:23:00 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"花京院", "table"=>"user_table", "search_type"=>"forward", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '花京院%')[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  Rendered users/_user_lists.html.erb (17.4ms)
+  Rendered search/search.html.erb within layouts/application (18.8ms)
+  Rendered layouts/_header.html.erb (7.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 198ms (Views: 179.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E5%85%B8%E6%98%8E&table=user_table&search_type=rear&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:23:17 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"典明", "table"=>"user_table", "search_type"=>"rear", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '#%{keyword}')[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  Rendered users/_user_lists.html.erb (2.4ms)
+  Rendered search/search.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 124ms (Views: 120.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E5%85%B8%E6%98%8E&table=user_table&search_type=rear&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:23:46 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"典明", "table"=>"user_table", "search_type"=>"rear", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%典明')[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  Rendered users/_user_lists.html.erb (15.6ms)
+  Rendered search/search.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 113ms (Views: 97.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E7%A9%BA%E6%9D%A1%E6%89%BF%E5%A4%AA%E9%83%8E&table=user_table&search_type=perfect&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:25:31 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"空条承太郎", "table"=>"user_table", "search_type"=>"perfect", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "空条承太郎"]]
+  ↳ app/views/users/_user_lists.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_user_lists.html.erb:25
+  Rendered users/_user_lists.html.erb (24.7ms)
+  Rendered search/search.html.erb within layouts/application (26.7ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 149ms (Views: 133.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E7%A9%BA%E6%9D%A1%E6%89%BF%E5%A4%AA%E9%83%8E&table=user_table&search_type=perfect&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:28:54 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"空条承太郎", "table"=>"user_table", "search_type"=>"perfect", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered search/search.html.erb within layouts/application (458.1ms)
+Completed 500 Internal Server Error in 478ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `keyword' for #<#<Class:0x00007fcb7abb57b8>:0x00007fcb7abbaf10>
+Did you mean?  @keyword):
+    1: <% if @table == "user_table" %>
+    2:   <h2>Users search for "<%= keyword %></h2>
+    3:   <%= render "users/user_lists", users: @users %>
+    4: <% elsif @table = "book_table" %>
+    5:   <h2>Books search for "#{@keyword}"</h2>
+  
+app/views/search/search.html.erb:2:in `_app_views_search_search_html_erb___4582733965997458861_70255957094380'
+Started GET "/search?utf8=%E2%9C%93&keyword=%E7%A9%BA%E6%9D%A1%E6%89%BF%E5%A4%AA%E9%83%8E&table=user_table&search_type=perfect&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:29:04 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"空条承太郎", "table"=>"user_table", "search_type"=>"perfect", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL[0m
+  ↳ app/views/users/_user_lists.html.erb:10
+  Rendered users/_user_lists.html.erb (3.3ms)
+  Rendered search/search.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 147ms (Views: 135.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=%E7%A9%BA%E6%9D%A1%E6%89%BF%E5%A4%AA%E9%83%8E&table=user_table&search_type=perfect&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:29:57 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"空条承太郎", "table"=>"user_table", "search_type"=>"perfect", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "空条承太郎"]]
+  ↳ app/views/users/_user_lists.html.erb:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  ↳ app/views/users/_user_lists.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  ↳ app/views/users/_user_lists.html.erb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mRelationship Load (0.1ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."followed_id" = ? LIMIT ?[0m  [["follower_id", 1], ["followed_id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/_user_lists.html.erb:25
+  Rendered users/_user_lists.html.erb (60.4ms)
+  Rendered search/search.html.erb within layouts/application (62.7ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 171ms (Views: 147.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=aaa&table=book_table&search_type=perfect&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:30:08 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"aaa", "table"=>"book_table", "search_type"=>"perfect", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."title" = ?[0m  [["title", "aaa"]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (46.3ms)
+  Rendered search/search.html.erb within layouts/application (48.0ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 142ms (Views: 126.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&keyword=aaa&table=book_table&search_type=perfect&commit=+%E6%A4%9C%E7%B4%A2+" for 113.52.28.249 at 2021-06-04 03:30:27 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"aaa", "table"=>"book_table", "search_type"=>"perfect", "commit"=>" 検索 "}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."title" = ?[0m  [["title", "aaa"]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/_book_lists.html.erb:15
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book_lists.html.erb:37
+  Rendered books/_book_lists.html.erb (22.9ms)
+  Rendered search/search.html.erb within layouts/application (24.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 136ms (Views: 131.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 113.52.28.249 at 2021-06-04 03:38:44 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OjXpcZH5tlse1cD3oW9gmr0ezgX4EXIQx7xT--Bcc_OT63Tc3kwrH3v0SwDZYK1CTljYFTSD2mYVcWwLT5UuBQ"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://8451a9ec04ef415389957a6feb7940fc.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 14ms (ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 113.52.28.249 at 2021-06-04 03:38:44 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OjXpcZH5tlse1cD3oW9gmr0ezgX4EXIQx7xT--Bcc_OT63Tc3kwrH3v0SwDZYK1CTljYFTSD2mYVcWwLT5UuBQ"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://8451a9ec04ef415389957a6feb7940fc.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 113.52.28.249 at 2021-06-04 03:38:45 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 113.52.28.249 at 2021-06-04 03:38:47 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 99ms (Views: 98.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 113.52.28.249 at 2021-06-04 03:38:56 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PnZxw7Hjbrp3enyypzJwOOSDZQuAusgETaynyPUiACsdpmbdpEyERB0iJbNY-trap7dJbXN_JBYBa9IsbuVNnA", "user"=>{"name"=>"空条承太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "空条承太郎"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://8451a9ec04ef415389957a6feb7940fc.vfs.cloud9.us-east-1.amazonaws.com/users/3
+Completed 302 Found in 325ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/3" for 113.52.28.249 at 2021-06-04 03:38:57 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 3]]
+  ↳ app/views/users/_user_info.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 3]]
+  ↳ app/views/users/_user_info.html.erb:26
+  Rendered users/_user_info.html.erb (8.1ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."user_id" = ? ORDER BY "books"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 3], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/books/_book_lists.html.erb:12
+  Rendered books/_book_lists.html.erb (4.5ms)
+  Rendered users/show.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 123.7ms | ActiveRecord: 0.7ms)
+
+
