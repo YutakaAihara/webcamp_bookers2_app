@@ -28788,3 +28788,66 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 74ms (Views: 70.5ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/books" for 113.52.28.249 at 2021-06-03 16:02:10 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (1.6ms)
+  Rendered books/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if object.errors.any? %>
+    2: <div class="error-messages">
+    3:   <h3><%= pluralize(object.errors.count, "error") %> prohibited this obj from being saved:</h3>
+    4:   <ul>
+  
+app/views/layouts/_errors.html.erb:1:in `_app_views_layouts__errors_html_erb__3865038448781167456_51023100'
+app/views/books/index.html.erb:2:in `_app_views_books_index_html_erb__3617449434056147873_50673960'
+Started GET "/books" for 113.52.28.249 at 2021-06-03 16:02:10 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (1.7ms)
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if object.errors.any? %>
+    2: <div class="error-messages">
+    3:   <h3><%= pluralize(object.errors.count, "error") %> prohibited this obj from being saved:</h3>
+    4:   <ul>
+  
+app/views/layouts/_errors.html.erb:1:in `_app_views_layouts__errors_html_erb__3865038448781167456_70133539177520'
+app/views/books/index.html.erb:2:in `_app_views_books_index_html_erb__3617449434056147873_70133539111640'
+Started GET "/books" for 113.52.28.249 at 2021-06-03 16:02:11 +0000
+Cannot render console from 113.52.28.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (1.7ms)
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if object.errors.any? %>
+    2: <div class="error-messages">
+    3:   <h3><%= pluralize(object.errors.count, "error") %> prohibited this obj from being saved:</h3>
+    4:   <ul>
+  
+app/views/layouts/_errors.html.erb:1:in `_app_views_layouts__errors_html_erb__3865038448781167456_70133568135120'
+app/views/books/index.html.erb:2:in `_app_views_books_index_html_erb__3617449434056147873_70133568055200'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
