@@ -19,8 +19,8 @@
       <td><%=link_to book_path(book) do %><%= book.title %><% end %></td>
       <td><%= book.body %></td>
       <% unless controller.action_name == "show" %>
-        <td>
-          <%= render "favorites/favorite", book: book%> 
+        <td class="favorite-<%= book.id %>">
+          <%= render "favorites/favorite", book: book %>
         </td>
         <td>コメント数 : <%= book.book_comments.count %></td>
       <% end %>
