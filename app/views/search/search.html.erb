@@ -1,0 +1,7 @@
+<% if @table == "user_table" %>
+  <h2>Users search for "<%= @keyword %>"</h2>
+  <%= render "users/user_lists", users: @users %>
+<% elsif @table = "book_table" %>
+  <h2>Books search for "<%= @keyword %>"</h2>
+  <%= render "books/book_lists", books: @books %>
+<% end %>
