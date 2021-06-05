@@ -40,11 +40,11 @@
         </tbody>
       </table>
       <div class="comments">
-        <table class="comment-list">
-          <%= render "post_comments/comment_list", {book: @book} %>
+        <table class="comment-<%= @book.id %>">
+          <%= render "book_comments/comment_list", {book: @book} %>
         </table>
         <div classs="comment-form">
-          <%= render "post_comments/comment_form", {book: @book, book_comment: @book_comment} %> 
+          <%= render "book_comments/comment_form", {book: @book, book_comment: @book_comment} %>
         </div>
       </div>
     </div>
