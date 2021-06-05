@@ -20,7 +20,7 @@ class Book < ApplicationRecord
     elsif search_type == "rear"
       Book.where("title LIKE ?", "%#{keyword}" )
     elsif search_type == "partial"
-      Book.where("title LIKE ?", "%#{@keyword}%" )
+      Book.where("title LIKE ?", "%#{keyword}%" )
     end
   end
 end
