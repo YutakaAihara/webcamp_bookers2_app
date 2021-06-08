@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'groups/index'
+  get 'groups/new'
+  get 'groups/create'
+  get 'groups/edit'
+  get 'groups/show'
   devise_for :users
   root to: 'homes#top'
   scope :home do
