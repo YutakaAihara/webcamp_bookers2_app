@@ -16,11 +16,14 @@ class User < ApplicationRecord
                                   dependent: :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  
+  has_many :group_users, dependent: :destroy
+  has_many :groups, through: :group_users
 
   attachment :profile_image
 
   validates :name, presence: true, uniqueness: true,
-                   length: { minimum: 2, maximum: 20 }
+                   length: { minimum: 2, maximum: 50 }
   validates :introduction, length: { maximum: 50 }
 
   def follow(other_user)
@@ -34,7 +37,7 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
-  
+
   def self.search(search_type, keyword)
     if search_type == "perfect"
       User.where(name: keyword)
@@ -43,7 +46,8 @@ class User < ApplicationRecord
     elsif search_type == "rear"
       User.where("name LIKE ?", "%#{keyword}" )
     elsif search_type == "partial"
-      User.where("name LIKE ?", "%#{@keyword}%" )
+      User.where("name LIKE ?", "%#{keyword}%" )
     end
   end
+  
 end
