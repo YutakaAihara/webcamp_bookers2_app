@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h1 class="edit-heading">Event Mail</h1>
+        <%= form_with model:[@group, @group_message], local:true do |f| %>
+          <div class="form-group">
+            <%= f.label :mail_title, 'Title', class: "group_mail_title" %>
+            <%= f.text_field :mail_title, class: "form-control group_mail_title" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :mail_body, 'Opinion', class: "book_opinion" %>
+        　    <%= f.text_area :mail_body, class: "form-control book_opinion" %>
+          </div>
+          <div class="form-group text-right">
+            <%= f.submit " 送信\ ", class: "btn btn-success" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
