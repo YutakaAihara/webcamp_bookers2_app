@@ -26,7 +26,7 @@ class BooksController < ApplicationController
   #本の詳細画面
   def show
     @new_book = Book.new
-    @book = Book.find(params[:id])
+    @book = Book.find(params[:id]).reverse_order
     @user = @book.user
     @book_comment = BookComment.new
   end
@@ -59,7 +59,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :body)
+    params.require(:book).permit(:title, :body, :image)
   end
 
 end

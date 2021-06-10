@@ -54,7 +54,6 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'rspec-rails'
   gem "factory_bot_rails"
-  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -76,3 +75,5 @@ gem 'font-awesome-sass', '~> 5.13'
 
 # kaminariの導入。たぶんユーザーの詳細だけ引き出すのに使う
 gem 'kaminari','~> 1.2.1'
+
+  gem 'faker'

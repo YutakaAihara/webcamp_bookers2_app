@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # user一覧画面
   def index
     @user = current_user
-    @users = User.all
+    @users = User.page(params[:page])
     @book = Book.new
   end
 

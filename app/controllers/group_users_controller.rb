@@ -1,0 +1,15 @@
+class GroupUsersController < ApplicationController
+  def create
+      @group = Group.find(params[:group_id])
+      group_user = current_user.group_users.build(group_id: @group.id)
+      group_user.save
+      redirect_to group_path(@group)
+  end
+
+  def destroy
+    @group = Group.find(params[:group_id])
+    group_user = current_user.group_users.find_by(group_id: @group.id)
+    group_user.destroy
+    redirect_to group_path(@group)
+  end
+end

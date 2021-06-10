@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get 'groups/index'
-  get 'groups/new'
-  get 'groups/create'
-  get 'groups/edit'
-  get 'groups/show'
   devise_for :users
   root to: 'homes#top'
   scope :home do
@@ -22,6 +17,10 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only: [:create, :destroy]
-  
+
   get 'search' => 'search#search'
+
+  resources :groups, only: [:index, :new, :create, :show, :edit, :update] do
+    resources :group_users, only: [:create, :destroy]
+  end
 end
