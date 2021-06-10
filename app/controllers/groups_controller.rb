@@ -19,6 +19,7 @@ class GroupsController < ApplicationController
   def create
     @user = current_user
     @group = @user.groups.build(group_params)
+    @group.owner_id = @user.id
     @user.save
     redirect_to groups_path
 
