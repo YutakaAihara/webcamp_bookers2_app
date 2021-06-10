@@ -8,8 +8,10 @@ class GroupMessagesController < ApplicationController
     @group = Group.find(params[:group_id])
     @group_message = GroupMessage.new(group_message_params)
     @group_message.group_id = @group.id
-    @group_message.save
-    redirect_to group_group_message_path(@group, @group_message)
+    if @group_message.save
+      GroupMessageMailer.event(@group_message).deliver_now
+      redirect_to group_group_message_path(@group, @group_message)
+    end
   end
 
   def show
